@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+        class Osoba {
+            constructor(imie, nazwisko){
+                this.imie = imie;
+                this.nazwisko = nazwisko;
+            }
+        }
+
+        class Uczen extends Osoba {
+            constructor(imie, nazwisko, klasa, numer){
+                super(imie, nazwisko);
+                this.klasa = klasa;
+                this.numer = numer;
+            }
+        }
+
+        class Nauczyciel extends Osoba {
+            constructor(imie, nazwisko, klasa_n, przedmiot){
+                super(imie, nazwisko);
+                this.klasa_n = klasa_n;
+                this.przedmiot = przedmiot;
+            }
+        }
+
+        let uczen = new Uczen("Eryk", "Kucharski", "2PI", "14");
+        console.log(uczen.imie, uczen.nazwisko, uczen.klasa, uczen.numer);
+        let nauczyciel = new Nauczyciel("Adam Fulara", "Fulara", "2PI", "Niemiecki");
+        console.log(nauczyciel.imie, nauczyciel.nazwisko, nauczyciel.klasa_n, nauczyciel.przedmiot);
+        </script>
+</body>
+</html>
